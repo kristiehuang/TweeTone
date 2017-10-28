@@ -69,7 +69,7 @@
         <!--Item-->
         <scene sceneID="JTM-At-s8g">
             <objects>
-                <tableViewController id="cFh-MF-AaJ" customClass="FeedViewController" customModule="GunnHacks" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="cFh-MF-AaJ" customClass="TimelineTableViewController" customModule="GunnHacks" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MWa-Am-SDw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,7 +93,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="utB-UG-hUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="338" y="-920"/>
+            <point key="canvasLocation" x="196" y="-602"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ew2-um-gNA">
@@ -106,7 +106,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="vco-7f-BCr" kind="relationship" relationship="viewControllers" id="gQT-wD-0b6"/>
-                        <segue destination="cFh-MF-AaJ" kind="relationship" relationship="viewControllers" id="7Qj-35-Fuh"/>
+                        <segue destination="cFh-MF-AaJ" kind="relationship" relationship="viewControllers" id="Gqj-BP-PjV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vpp-tV-FNx" userLabel="First Responder" sceneMemberID="firstResponder"/>
