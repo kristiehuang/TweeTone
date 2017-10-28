@@ -25,7 +25,7 @@ class PlaylistViewController: UIViewController {
     
     @IBAction func playlistButtonTapped(_ sender: Any) {
         
-        UIApplication.shared.openURL(URL(string: "http://www.stackoverflow.com")!)
+        UIApplication.shared.openURL(URL(string: "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXbvABJXBIyiY")!)
 
     }
     
