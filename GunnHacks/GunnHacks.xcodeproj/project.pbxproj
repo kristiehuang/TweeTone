@@ -263,6 +263,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VC465BEP2A;
 				INFOPLIST_FILE = GunnHacks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jacobkim.GunnHacks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,6 +277,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VC465BEP2A;
 				INFOPLIST_FILE = GunnHacks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jacobkim.GunnHacks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,6 +304,7 @@
 				603A662A1FA4278D00EF1E01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
