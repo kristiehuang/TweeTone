@@ -12,6 +12,7 @@
 		603A661F1FA4278D00EF1E01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 603A661D1FA4278D00EF1E01 /* Main.storyboard */; };
 		603A66211FA4278D00EF1E01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 603A66201FA4278D00EF1E01 /* Assets.xcassets */; };
 		603A66241FA4278D00EF1E01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 603A66221FA4278D00EF1E01 /* LaunchScreen.storyboard */; };
+		603A662D1FA43B8300EF1E01 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603A662C1FA43B8300EF1E01 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		603A66201FA4278D00EF1E01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		603A66231FA4278D00EF1E01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		603A66251FA4278D00EF1E01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		603A662C1FA43B8300EF1E01 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				603A662D1FA43B8300EF1E01 /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				603A66181FA4278D00EF1E01 /* GunnHacks */,
 				603A66171FA4278D00EF1E01 /* Products */,
+				603A662B1FA43B8300EF1E01 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +66,14 @@
 				603A66251FA4278D00EF1E01 /* Info.plist */,
 			);
 			path = GunnHacks;
+			sourceTree = "<group>";
+		};
+		603A662B1FA43B8300EF1E01 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				603A662C1FA43B8300EF1E01 /* CoreMotion.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
