@@ -1,15 +1,24 @@
 PODS:
+  - Alamofire (4.5.1)
+  - AlamofireSwiftyJSON (1.0.0):
+    - Alamofire (~> 4.0)
+    - SwiftyJSON (~> 3.0)
+  - SwiftyJSON (3.1.4)
   - TwitterCore (3.0.1)
   - TwitterKit (3.1.1):
     - TwitterCore (>= 3.0.1)
 
 DEPENDENCIES:
+  - AlamofireSwiftyJSON
   - TwitterKit
 
 SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  AlamofireSwiftyJSON: 78908b766483a28aa5cc90fd191a687467042973
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   TwitterCore: 6856288a1c25e5281363250681f33b42fce1da42
   TwitterKit: 313bf02baee8427f7649b3640169178e5a8b5a99
 
-PODFILE CHECKSUM: 89776003c57d041b2a13a051c38048ac9641e535
+PODFILE CHECKSUM: 7a7bbcaee8db7ff4ac8b35fa99fd81a7ae0f6309
 
 COCOAPODS: 1.2.1
