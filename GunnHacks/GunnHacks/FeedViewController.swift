@@ -11,6 +11,7 @@ import TwitterKit
 
 class FeedViewController: UITableViewController {
     
+    
     var dataSource: TWTRUserTimelineDataSource? = nil
 
     override func viewDidLoad() {
@@ -24,12 +25,22 @@ class FeedViewController: UITableViewController {
         
         let client = TWTRAPIClient()
         
+        var tweets:TWTRTweet
+        
         client.loadTweet(withID: "20") { (tweet, error) in
             if let t = tweet {
-                print(t)
+                print(t.author)
+                print(t.text)
+                tweets = t
+                
+                let tweetView = TWTRTweetView(tweet: tweets)
+                tweetView.showActionButtons = true
+                self.addSubview(tweetView)
             } else {
             }
         }
+        
+
         
     }
 
@@ -42,23 +53,23 @@ class FeedViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath)
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
