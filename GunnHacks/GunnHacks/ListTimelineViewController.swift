@@ -14,6 +14,7 @@ class ListTimelineViewController: TWTRTimelineViewController {
         super.viewDidLoad()
         
         let client = TWTRAPIClient()
-        self.dataSource = TWTRListTimelineDataSource(listSlug: "trending", listOwnerScreenName: "", apiClient: client)
+        let dataSource = TWTRSearchTimelineDataSource(searchQuery: "trending", apiClient: client)
+        dataSource.resultType = "popular"
     }
 }
