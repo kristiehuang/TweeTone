@@ -72,13 +72,8 @@
         <!--Item-->
         <scene sceneID="JTM-At-s8g">
             <objects>
-<<<<<<< HEAD
-                <tableViewController id="cFh-MF-AaJ" customClass="FeedViewController" customModule="GunnHacks" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MWa-Am-SDw">
-=======
                 <tableViewController id="cFh-MF-AaJ" customClass="TimelineTableViewController" customModule="GunnHacks" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MWa-Am-SDw">
->>>>>>> be1e05cabdb9479116bf49d08374b1f12618fdcc
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
