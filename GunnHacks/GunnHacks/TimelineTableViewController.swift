@@ -21,8 +21,7 @@ class TimelineTableViewController: TWTRTimelineViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         let client = TWTRAPIClient()
-        
-        /* one random tweet lol
+        /*
         client.loadTweet(withID: "200") { (tweet, error) in
             if let t = tweet {
                 print(t)
