@@ -21,11 +21,13 @@ class TimelineTableViewController: TWTRTimelineViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         let client = TWTRAPIClient()
+        var tweetsArray:[String] = []
         
-               
-        client.loadTweet(withID: "200") { (tweet, error) in
+        /*
+        client.loadTweet(withID: "202") { (tweet, error) in
             if let t = tweet {
                 print(t)
+                tweetsArray.append(t.text)
                 
                 let tweetView = TWTRTweetView(tweet: t)
                 tweetView.showActionButtons = true
@@ -59,6 +61,63 @@ class TimelineTableViewController: TWTRTimelineViewController {
                 print("Failed to load Tweet:")
             }
         }
+ 
+ */
+        
+        
+        //var tweetss:[TWTRTweet] = []
+        
+        client.loadTweets(withIDs: ["510908133917487104","200","20"]) { (tweetss, error) in
+            print(tweetss ?? [])
+            for t in tweetss! {
+                let tweetView = TWTRTweetView(tweet: t)
+                tweetView.showActionButtons = true
+                self.view.addSubview(tweetView)
+            }
+        }
+        /*
+        client.loadTweets(withID: "202") { (tweet, error) in
+            if let t = tweet {
+                print(t)
+                tweetsArray.append(t.text)
+                
+                let tweetView = TWTRTweetView(tweet: t)
+                tweetView.showActionButtons = true
+                self.view.addSubview(tweetView)
+                
+                let horizontalContraints = NSLayoutConstraint(item: tweetView, attribute:
+                    .leadingMargin, relatedBy: .equal, toItem: self.view,
+                                    attribute: .leadingMargin, multiplier: 1.0,
+                                    constant: 20)
+                
+                //pin the slider 20 points from the right edge of the super view
+                //negative because we want to pin -20 points from the end of the superview.
+                //ex. if with of super view is 300, 300-20 = 280 position
+                let horizontal2Contraints = NSLayoutConstraint(item: tweetView, attribute:
+                    .trailingMargin, relatedBy: .equal, toItem: self.view,
+                                     attribute: .trailingMargin, multiplier: 1.0, constant: -20)
+                
+                //pin 100 points from the top of the super
+                let pinTop = NSLayoutConstraint(item: tweetView, attribute: .top, relatedBy: .equal,
+                                                toItem: self.view, attribute: .top, multiplier: 1.0, constant: 100)
+                
+                tweetView.translatesAutoresizingMaskIntoConstraints = false
+                
+                //IOS 8
+                //activate the constrains.
+                //we pass an array of all the contraints
+                NSLayoutConstraint.activate([horizontalContraints, horizontal2Contraints,pinTop])
+                
+                
+            } else {
+                print("Failed to load Tweet:")
+            }
+        }
+        
+*/
+        
+        
+        
         self.dataSource = TWTRListTimelineDataSource(listSlug: "surfing", listOwnerScreenName: "stevenhepting", apiClient: client)
         
         
