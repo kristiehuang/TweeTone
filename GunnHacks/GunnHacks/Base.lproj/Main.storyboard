@@ -27,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="-798" y="-919"/>
         </scene>
-        <!--Item-->
+        <!--Trends-->
         <scene sceneID="aiH-uf-Rvk">
             <objects>
                 <tableViewController id="BPM-lh-7uK" customClass="TimelineTableViewController" customModule="GunnHacks" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,7 +50,9 @@
                             <outlet property="delegate" destination="BPM-lh-7uK" id="kjX-b7-Zp3"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="PmH-qL-uD2"/>
+                    <tabBarItem key="tabBarItem" title="Trends" image="trends icon" id="PmH-qL-uD2">
+                        <inset key="imageInsets" minX="3" minY="3" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1St-0X-6GO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,4 +69,7 @@
             <point key="canvasLocation" x="-257" y="-1534"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="trends icon" width="36" height="33"/>
+    </resources>
 </document>
