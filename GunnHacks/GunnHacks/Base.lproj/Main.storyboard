@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Trends-->
         <scene sceneID="Ozj-H2-Gj2">
             <objects>
                 <viewController id="iWy-1K-v1D" customClass="FeedViewController" customModule="GunnHacks" customModuleProvider="target" sceneMemberID="viewController">
@@ -53,7 +53,9 @@
                             <constraint firstItem="HqP-gD-PEE" firstAttribute="leading" secondItem="95v-TX-g1o" secondAttribute="leading" id="nGC-Jz-RiU"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="qNb-NN-dmW"/>
+                    <tabBarItem key="tabBarItem" title="Trends" image="trends icon" id="qNb-NN-dmW">
+                        <inset key="imageInsets" minX="3" minY="3" maxX="3" maxY="0.0"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X8b-eC-FVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -88,4 +90,7 @@
             <point key="canvasLocation" x="-257" y="-1534"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="trends icon" width="36" height="33"/>
+    </resources>
 </document>
