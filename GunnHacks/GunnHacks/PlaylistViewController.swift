@@ -16,7 +16,9 @@ typealias ServiceResponse = (JSONSerialization, NSError?) -> Void
 
 
 class PlaylistViewController: UIViewController {
+    
     @IBOutlet weak var dateLabel: UILabel!
+    
     @IBOutlet weak var moodLabel: UILabel!
     
     @IBOutlet weak var playlistButton: UIButton!
@@ -77,11 +79,11 @@ class PlaylistViewController: UIViewController {
         
         
     }
-    
-    
-    @IBAction func playlistButtonTapped(_ sender: Any) {
+    @IBAction func showTweetsTapped(_ sender: Any) {
         
-        UIApplication.shared.openURL(URL(string: "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXbvABJXBIyiY")!)
+    }
+    
+    @IBAction func playlistButtonTapped(_ sender: Any) {        UIApplication.shared.openURL(URL(string: "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXbvABJXBIyiY")!)
 
     }
     
