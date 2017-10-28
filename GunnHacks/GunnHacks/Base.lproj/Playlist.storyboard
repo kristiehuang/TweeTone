@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lv2-24-gQu">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,9 +19,57 @@
                         <viewControllerLayoutGuide type="bottom" id="AfC-9f-yUD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZWq-6l-YQo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="Sgx-G5-upP">
+                                <rect key="frame" x="20" y="40" width="374" height="420"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today, October 27," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgs-6g-Okd">
+                                        <rect key="frame" x="103" y="0.0" width="168.33333333333331" height="33"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="agO-Oa-JiI">
+                                        <rect key="frame" x="80.666666666666686" y="77" width="212.66666666666663" height="104"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The world" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhv-o8-MRI">
+                                                <rect key="frame" x="0.0" y="0.0" width="212.66666666666663" height="52"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="45"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is feeling" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwe-vc-Fw5">
+                                                <rect key="frame" x="0.0" y="52" width="212.66666666666663" height="52"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="45"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QFs-Pu-OwM">
+                                        <rect key="frame" x="67" y="225" width="240" height="195"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="420" id="RFW-nV-cxU"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGN-OC-O1m">
+                                <rect key="frame" x="117" y="608" width="180" height="37"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="21"/>
+                                <state key="normal" title="Make me a playlist!"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Sgx-G5-upP" firstAttribute="top" secondItem="ZWq-6l-YQo" secondAttribute="topMargin" constant="40" id="3Ej-T4-2Fg"/>
+                            <constraint firstAttribute="trailing" secondItem="Sgx-G5-upP" secondAttribute="trailing" constant="20" id="I2m-3b-zDA"/>
+                            <constraint firstItem="AfC-9f-yUD" firstAttribute="top" secondItem="UGN-OC-O1m" secondAttribute="bottom" constant="42" id="akJ-38-Uiv"/>
+                            <constraint firstItem="UGN-OC-O1m" firstAttribute="centerX" secondItem="ZWq-6l-YQo" secondAttribute="centerX" id="eQ1-EA-yTV"/>
+                            <constraint firstItem="Sgx-G5-upP" firstAttribute="leading" secondItem="ZWq-6l-YQo" secondAttribute="leading" constant="20" id="gsd-Hm-bl2"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fHg-QE-eOX"/>
                 </viewController>
@@ -31,9 +80,10 @@
         <!--Item 1-->
         <scene sceneID="bNs-Lh-tkB">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lv2-24-gQu" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Lv2-24-gQu" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item 1" id="jaF-8P-A7t"/>
                     <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6GG-jy-IdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
