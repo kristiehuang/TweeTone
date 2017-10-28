@@ -11,8 +11,9 @@ import TwitterKit
 
 class TimelineTableViewController: TWTRTimelineViewController {
         
-    var tweetNumber = 1
+    var tweetNumber = 0
     
+    @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,12 +26,11 @@ class TimelineTableViewController: TWTRTimelineViewController {
         let client = TWTRAPIClient()
         
         
-        for _ in 1...10       {
+        for _ in 1...20       {
             let randNum = arc4random_uniform(300)
             
-            showTweet(client: client, randNum: randNum, tweetNumber: tweetNumber)
+            showTweet(client: client, randNum: randNum)
             
-            tweetNumber += 1
         }
         
         self.dataSource = TWTRListTimelineDataSource(listSlug: "surfing", listOwnerScreenName: "stevenhepting", apiClient: client)
@@ -47,7 +47,7 @@ class TimelineTableViewController: TWTRTimelineViewController {
 //        return cell
 //    }
     
-    func showTweet(client: TWTRAPIClient, randNum: UInt32, tweetNumber: Int){
+    func showTweet(client: TWTRAPIClient, randNum: UInt32){
         
         client.loadTweet(withID: "\(randNum)") { (tweet, error) in
             if let t = tweet {
@@ -55,7 +55,10 @@ class TimelineTableViewController: TWTRTimelineViewController {
                 
                 let tweetView = TWTRTweetView(tweet: t)
                 tweetView.showActionButtons = true
-                self.view.addSubview(tweetView)
+                self.scrollView.addSubview(tweetView)
+                
+                self.tweetNumber += 1
+
                 
 //                let horizontalContraints = NSLayoutConstraint(item: tweetView, attribute:
 //                    .leadingMargin, relatedBy: .equal, toItem: self.view,
@@ -74,7 +77,7 @@ class TimelineTableViewController: TWTRTimelineViewController {
                 
                 //pin 100 points from the top of the super
                 let pinTop = NSLayoutConstraint(item: tweetView, attribute: .top, relatedBy: .equal,
-                                                toItem: self.view, attribute: .top, multiplier: 1.0, constant: CGFloat(100 * tweetNumber))
+                                                toItem: self.view, attribute: .top, multiplier: 1.0, constant: CGFloat(100*self.tweetNumber))
                 
                 tweetView.translatesAutoresizingMaskIntoConstraints = false
                 
@@ -99,23 +102,23 @@ class TimelineTableViewController: TWTRTimelineViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "testCell", for: indexPath)
 
         // Configure the cell...
 
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.
