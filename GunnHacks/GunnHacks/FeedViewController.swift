@@ -11,7 +11,6 @@ import TwitterKit
 
 class FeedViewController: UITableViewController {
     
-    
     var dataSource: TWTRUserTimelineDataSource? = nil
 
     override func viewDidLoad() {
@@ -25,29 +24,17 @@ class FeedViewController: UITableViewController {
         
         let client = TWTRAPIClient()
         
-<<<<<<< HEAD
-        var tweets:TWTRTweet
-=======
         let dataSource = TWTRListTimelineDataSource(listSlug: "surfing", listOwnerScreenName: "stevenhepting", apiClient: client)
         dataSource.resultType = "popular"
         
         dataSource.
->>>>>>> be1e05cabdb9479116bf49d08374b1f12618fdcc
         
         client.loadTweet(withID: "20") { (tweet, error) in
             if let t = tweet {
-                print(t.author)
-                print(t.text)
-                tweets = t
-                
-                let tweetView = TWTRTweetView(tweet: tweets)
-                tweetView.showActionButtons = true
-                self.addSubview(tweetView)
+                print(t)
             } else {
             }
         }
-        
-
         
     }
 
@@ -60,23 +47,23 @@ class FeedViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return 0
     }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
 
         return cell
     }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.
