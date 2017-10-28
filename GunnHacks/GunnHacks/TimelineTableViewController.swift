@@ -22,14 +22,17 @@ class TimelineTableViewController: TWTRTimelineViewController {
         
         let client = TWTRAPIClient()
         
-        /* one random tweet lol
+         //one random tweet lol
         client.loadTweet(withID: "200") { (tweet, error) in
             if let t = tweet {
                 print(t)
+                let tweetView = TWTRTweetView(tweet: t)
+                tweetView.showActionButtons = true
+                self.view.addSubview(tweetView)
             } else {
                 print("Failed to load Tweet:")
             }
-        } */
+        }
         self.dataSource = TWTRListTimelineDataSource(listSlug: "surfing", listOwnerScreenName: "stevenhepting", apiClient: client)
         
         
