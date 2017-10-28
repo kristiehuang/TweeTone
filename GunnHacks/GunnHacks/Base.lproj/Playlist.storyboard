@@ -57,21 +57,42 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGN-OC-O1m">
-                                <rect key="frame" x="117" y="608" width="180" height="37"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="21"/>
-                                <state key="normal" title="Make me a playlist!"/>
+                                <rect key="frame" x="60" y="595" width="294" height="50"/>
+                                <color key="backgroundColor" red="0.7270774245262146" green="0.79440802335739136" blue="0.89838355779647827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="b3B-LS-q45"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="21"/>
+                                <state key="normal" title="Make me a playlist!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playlistButtonTapped:" destination="BHj-Vb-aVV" eventType="touchUpInside" id="6ll-Qf-Zpu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Sgx-G5-upP" firstAttribute="top" secondItem="ZWq-6l-YQo" secondAttribute="topMargin" constant="40" id="3Ej-T4-2Fg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UGN-OC-O1m" secondAttribute="trailing" constant="40" id="Efm-py-Tzx"/>
                             <constraint firstAttribute="trailing" secondItem="Sgx-G5-upP" secondAttribute="trailing" constant="20" id="I2m-3b-zDA"/>
                             <constraint firstItem="AfC-9f-yUD" firstAttribute="top" secondItem="UGN-OC-O1m" secondAttribute="bottom" constant="42" id="akJ-38-Uiv"/>
                             <constraint firstItem="UGN-OC-O1m" firstAttribute="centerX" secondItem="ZWq-6l-YQo" secondAttribute="centerX" id="eQ1-EA-yTV"/>
                             <constraint firstItem="Sgx-G5-upP" firstAttribute="leading" secondItem="ZWq-6l-YQo" secondAttribute="leading" constant="20" id="gsd-Hm-bl2"/>
+                            <constraint firstItem="UGN-OC-O1m" firstAttribute="leading" secondItem="ZWq-6l-YQo" secondAttribute="leadingMargin" constant="40" id="hgI-R1-hNY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fHg-QE-eOX"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="zgs-6g-Okd" id="iCw-Os-UZP"/>
+                        <outlet property="moodImage" destination="QFs-Pu-OwM" id="ZLY-hF-XaI"/>
+                        <outlet property="playlistButton" destination="UGN-OC-O1m" id="kBX-1E-KxE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n9Q-bu-B3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
