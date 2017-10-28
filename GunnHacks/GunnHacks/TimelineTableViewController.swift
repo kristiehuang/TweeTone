@@ -22,8 +22,23 @@ class TimelineTableViewController: TWTRTimelineViewController {
         
         let client = TWTRAPIClient()
         
-               
-        client.loadTweet(withID: "200") { (tweet, error) in
+        var tweetNumber = 1
+        
+        for _ in 1...5
+        {
+            let randNum = arc4random_uniform(300)
+        
+            showTweet(client: client, randNum: randNum, tweetNumber: tweetNumber)
+        
+            tweetNumber += 1
+        }
+        self.dataSource = TWTRListTimelineDataSource(listSlug: "surfing", listOwnerScreenName: "stevenhepting", apiClient: client)
+        
+    }
+    
+    func showTweet(client: TWTRAPIClient, randNum: UInt32, tweetNumber: Int){
+        
+        client.loadTweet(withID: "\(randNum)") { (tweet, error) in
             if let t = tweet {
                 print(t)
                 
@@ -45,7 +60,7 @@ class TimelineTableViewController: TWTRTimelineViewController {
                 
                 //pin 100 points from the top of the super
                 let pinTop = NSLayoutConstraint(item: tweetView, attribute: .top, relatedBy: .equal,
-                                                toItem: self.view, attribute: .top, multiplier: 1.0, constant: 100)
+                                                toItem: self.view, attribute: .top, multiplier: 1.0, constant: CGFloat(100 * tweetNumber))
                 
                 tweetView.translatesAutoresizingMaskIntoConstraints = false
                 
@@ -59,9 +74,6 @@ class TimelineTableViewController: TWTRTimelineViewController {
                 print("Failed to load Tweet:")
             }
         }
-        self.dataSource = TWTRListTimelineDataSource(listSlug: "surfing", listOwnerScreenName: "stevenhepting", apiClient: client)
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
