@@ -5,7 +5,7 @@
 //  Created by Sonal Muthal on 10/28/17.
 //  Copyright © 2017 Jacob Kim. All rights reserved.
 //
-
+/*
 import UIKit
 import TwitterKit
 
@@ -25,7 +25,14 @@ class FeedViewController: UITableViewController {
         
         let client = TWTRAPIClient()
         
+<<<<<<< HEAD
         var tweets:TWTRTweet
+=======
+        let dataSource = TWTRListTimelineDataSource(listSlug: "surfing", listOwnerScreenName: "stevenhepting", apiClient: client)
+        dataSource.resultType = "popular"
+        
+        dataSource.
+>>>>>>> be1e05cabdb9479116bf49d08374b1f12618fdcc
         
         client.loadTweet(withID: "20") { (tweet, error) in
             if let t = tweet {
@@ -117,3 +124,4 @@ class FeedViewController: UITableViewController {
     */
 
 }
+*/

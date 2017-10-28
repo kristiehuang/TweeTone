@@ -15,6 +15,7 @@
 		603A66321FA4541700EF1E01 /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603A66311FA4541700EF1E01 /* PlaylistViewController.swift */; };
 		9DD5CAB0CD39BD29EF418ACD /* Pods_GunnHacks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21BF738BE641B5C56E44BF0B /* Pods_GunnHacks.framework */; };
 		F9BFFE1B1FA4911700F247E2 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BFFE1A1FA4911700F247E2 /* FeedViewController.swift */; };
+		F9DE49C91FA4960A0014480C /* TimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DE49C81FA4960A0014480C /* TimelineTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		603A662F1FA4534100EF1E01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Playlist.storyboard; sourceTree = "<group>"; };
 		603A66311FA4541700EF1E01 /* PlaylistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
 		F9BFFE1A1FA4911700F247E2 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		F9DE49C81FA4960A0014480C /* TimelineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				603A66191FA4278D00EF1E01 /* AppDelegate.swift */,
 				603A66311FA4541700EF1E01 /* PlaylistViewController.swift */,
 				F9BFFE1A1FA4911700F247E2 /* FeedViewController.swift */,
+				F9DE49C81FA4960A0014480C /* TimelineTableViewController.swift */,
 				603A662E1FA4534100EF1E01 /* Playlist.storyboard */,
 				603A661D1FA4278D00EF1E01 /* Main.storyboard */,
 				603A66201FA4278D00EF1E01 /* Assets.xcassets */,
@@ -221,6 +224,7 @@
 			files = (
 				603A661A1FA4278D00EF1E01 /* AppDelegate.swift in Sources */,
 				F9BFFE1B1FA4911700F247E2 /* FeedViewController.swift in Sources */,
+				F9DE49C91FA4960A0014480C /* TimelineTableViewController.swift in Sources */,
 				603A66321FA4541700EF1E01 /* PlaylistViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
