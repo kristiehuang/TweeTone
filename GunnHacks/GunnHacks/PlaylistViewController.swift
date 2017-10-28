@@ -23,6 +23,19 @@ class PlaylistViewController: UIViewController {
     
     @IBOutlet weak var playlistButton: UIButton!
     
+    var mood = ""
+    func isHappy(tweet: String) -> Bool {
+        var words = ["yay", "happy", ";)", "better", "good", "fun", ":)", "!", "is", "my"]
+        for word in words {
+            if TimelineTableViewController.tweetString.contains(word) {
+                return true
+            }
+        }
+        return false
+    }
+
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +46,15 @@ class PlaylistViewController: UIViewController {
         let result = formatter.string(from: date)
 
         dateLabel.text = "Today, \(result),"
+        
+        
+        if isHappy(tweet: TimelineTableViewController.tweetString) == true {
+            moodLabel.text = "joy"
+        }
+        else { moodLabel.text = "sad"
+        }
+        
+        
         /*
         
         guard let jsonURL = Bundle.main.url(forResource: "iTunes-Movies", withExtension: "json") else {
