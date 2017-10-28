@@ -98,11 +98,13 @@
             </objects>
             <point key="canvasLocation" x="1336.8" y="-918.89055472263874"/>
         </scene>
-        <!--Item 1-->
+        <!--Playlist-->
         <scene sceneID="bNs-Lh-tkB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Lv2-24-gQu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="jaF-8P-A7t"/>
+                    <tabBarItem key="tabBarItem" title="Playlist" image="music icon" id="jaF-8P-A7t">
+                        <inset key="imageInsets" minX="3" minY="3" maxX="3" maxY="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -120,4 +122,7 @@
             <point key="canvasLocation" x="397.60000000000002" y="-918.89055472263874"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="music icon" width="33" height="33"/>
+    </resources>
 </document>

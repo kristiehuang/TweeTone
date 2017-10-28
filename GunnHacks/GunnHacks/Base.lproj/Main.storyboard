@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9uv-qS-0Sw">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Trends-->
         <scene sceneID="Ozj-H2-Gj2">
             <objects>
                 <viewController id="iWy-1K-v1D" customClass="FeedViewController" customModule="GunnHacks" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,25 +19,25 @@
                         <viewControllerLayoutGuide type="bottom" id="EMX-PG-zPb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="95v-TX-g1o">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HqP-gD-PEE">
-                                <rect key="frame" x="0.0" y="69" width="375" height="549"/>
+                                <rect key="frame" x="0.0" y="69" width="414" height="618"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GqW-QB-vvG">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GqW-QB-vvG" id="F8E-Lu-gD0">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trending" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOE-4K-6bC">
-                                <rect key="frame" x="147" y="40" width="80.5" height="22"/>
+                                <rect key="frame" x="166.66666666666666" y="40" width="80.666666666666686" height="22"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -53,7 +53,9 @@
                             <constraint firstItem="HqP-gD-PEE" firstAttribute="leading" secondItem="95v-TX-g1o" secondAttribute="leading" id="nGC-Jz-RiU"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="qNb-NN-dmW"/>
+                    <tabBarItem key="tabBarItem" title="Trends" image="trends icon" id="qNb-NN-dmW">
+                        <inset key="imageInsets" minX="3" minY="3" maxX="3" maxY="0.0"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X8b-eC-FVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -88,4 +90,7 @@
             <point key="canvasLocation" x="-257" y="-1534"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="trends icon" width="36" height="33"/>
+    </resources>
 </document>
