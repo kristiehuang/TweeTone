@@ -24,13 +24,18 @@ class PlaylistViewController: UIViewController {
     @IBOutlet weak var playlistButton: UIButton!
     
     var mood = ""
+    var playlistURL = ""
     func isHappy(tweet: String) -> Bool {
         var words = ["yay", "happy", ";)", "better", "good", "fun", ":)", "!", "is", "my"]
         for word in words {
             if TimelineTableViewController.tweetString.contains(word) {
+                playlistURL = "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWYBO1MoTDhZI"
                 return true
+                
             }
+            else { playlistURL = "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXbvABJXBIyiY" }
         }
+        playlistURL = "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXbvABJXBIyiY"
         return false
     }
 
@@ -105,7 +110,9 @@ class PlaylistViewController: UIViewController {
         
     }
     
-    @IBAction func playlistButtonTapped(_ sender: Any) {        UIApplication.shared.openURL(URL(string: "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXbvABJXBIyiY")!)
+    @IBAction func playlistButtonTapped(_ sender: Any) {
+        
+        UIApplication.shared.openURL(URL(string: playlistURL)!)
 
     }
     
