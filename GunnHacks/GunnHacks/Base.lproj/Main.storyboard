@@ -13,7 +13,7 @@
         <!--Trends-->
         <scene sceneID="Ozj-H2-Gj2">
             <objects>
-                <viewController id="iWy-1K-v1D" customClass="FeedViewController" customModule="GunnHacks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iWy-1K-v1D" customClass="ListTimelineViewController" customModule="GunnHacks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kQ5-p6-VXS"/>
                         <viewControllerLayoutGuide type="bottom" id="EMX-PG-zPb"/>
