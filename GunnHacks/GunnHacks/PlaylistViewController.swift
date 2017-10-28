@@ -17,13 +17,20 @@ typealias ServiceResponse = (JSONSerialization, NSError?) -> Void
 
 class PlaylistViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var moodImage: UIImageView!
+    @IBOutlet weak var moodLabel: UILabel!
     
     @IBOutlet weak var playlistButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let date = Date()
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = "MMMM dd, YYYY"
+        let result = formatter.string(from: date)
+
+        dateLabel.text = "Today, \(result),"
         /*
         
         guard let jsonURL = Bundle.main.url(forResource: "iTunes-Movies", withExtension: "json") else {

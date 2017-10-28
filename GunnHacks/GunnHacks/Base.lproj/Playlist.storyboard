@@ -9,6 +9,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Playlist View Controller-->
         <scene sceneID="Wri-xz-3Vd">
@@ -22,45 +27,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jnr-eS-ge1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" red="0.90832957442925899" green="0.94591706086814131" blue="0.98724888392857146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="Sgx-G5-upP">
-                                <rect key="frame" x="20" y="40" width="374" height="420"/>
+                                <rect key="frame" x="20" y="40" width="374" height="250"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today, October 27," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgs-6g-Okd">
-                                        <rect key="frame" x="103" y="0.0" width="168.33333333333331" height="33"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Today, October 27," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgs-6g-Okd">
+                                        <rect key="frame" x="103" y="0.0" width="168.33333333333331" height="102"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="19"/>
-                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="agO-Oa-JiI">
-                                        <rect key="frame" x="80.666666666666686" y="77" width="212.66666666666663" height="104"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="agO-Oa-JiI">
+                                        <rect key="frame" x="80.666666666666686" y="146" width="212.66666666666663" height="104"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The world" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhv-o8-MRI">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="The world" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhv-o8-MRI">
                                                 <rect key="frame" x="0.0" y="0.0" width="212.66666666666663" height="52"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="45"/>
-                                                <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is feeling" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwe-vc-Fw5">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="is feeling" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwe-vc-Fw5">
                                                 <rect key="frame" x="0.0" y="52" width="212.66666666666663" height="52"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="45"/>
-                                                <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QFs-Pu-OwM">
-                                        <rect key="frame" x="67" y="225" width="240" height="195"/>
-                                    </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="420" id="RFW-nV-cxU"/>
+                                    <constraint firstAttribute="height" constant="250" id="RFW-nV-cxU"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGN-OC-O1m">
-                                <rect key="frame" x="60" y="595" width="294" height="50"/>
-                                <color key="backgroundColor" red="0.7270774245262146" green="0.79440802335739136" blue="0.89838355779647827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="60" y="562" width="294" height="70"/>
+                                <color key="backgroundColor" red="0.63021763392857144" green="0.8427239611047157" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="b3B-LS-q45"/>
+                                    <constraint firstAttribute="height" constant="70" id="b3B-LS-q45"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="21"/>
                                 <state key="normal" title="Make me a playlist!">
@@ -68,35 +71,46 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="25"/>
+                                        <integer key="value" value="35"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="playlistButtonTapped:" destination="BHj-Vb-aVV" eventType="touchUpInside" id="6ll-Qf-Zpu"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sadness" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fT-fG-16b">
+                                <rect key="frame" x="117.33333333333331" y="390" width="180.33333333333337" height="52"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="45"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Sgx-G5-upP" firstAttribute="top" secondItem="ZWq-6l-YQo" secondAttribute="topMargin" constant="40" id="3Ej-T4-2Fg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UGN-OC-O1m" secondAttribute="trailing" constant="40" id="Efm-py-Tzx"/>
+                            <constraint firstAttribute="trailing" secondItem="Jnr-eS-ge1" secondAttribute="trailing" id="HBw-BH-aM8"/>
                             <constraint firstAttribute="trailing" secondItem="Sgx-G5-upP" secondAttribute="trailing" constant="20" id="I2m-3b-zDA"/>
-                            <constraint firstItem="AfC-9f-yUD" firstAttribute="top" secondItem="UGN-OC-O1m" secondAttribute="bottom" constant="42" id="akJ-38-Uiv"/>
+                            <constraint firstItem="3fT-fG-16b" firstAttribute="top" secondItem="Sgx-G5-upP" secondAttribute="bottom" constant="100" id="aIM-ZU-VFB"/>
+                            <constraint firstItem="AfC-9f-yUD" firstAttribute="top" secondItem="UGN-OC-O1m" secondAttribute="bottom" constant="55" id="akJ-38-Uiv"/>
                             <constraint firstItem="UGN-OC-O1m" firstAttribute="centerX" secondItem="ZWq-6l-YQo" secondAttribute="centerX" id="eQ1-EA-yTV"/>
                             <constraint firstItem="Sgx-G5-upP" firstAttribute="leading" secondItem="ZWq-6l-YQo" secondAttribute="leading" constant="20" id="gsd-Hm-bl2"/>
                             <constraint firstItem="UGN-OC-O1m" firstAttribute="leading" secondItem="ZWq-6l-YQo" secondAttribute="leadingMargin" constant="40" id="hgI-R1-hNY"/>
+                            <constraint firstItem="Jnr-eS-ge1" firstAttribute="top" secondItem="ZWq-6l-YQo" secondAttribute="top" id="n1w-Bf-BQM"/>
+                            <constraint firstItem="3fT-fG-16b" firstAttribute="centerX" secondItem="ZWq-6l-YQo" secondAttribute="centerX" id="sqb-2u-7vq"/>
+                            <constraint firstAttribute="bottom" secondItem="Jnr-eS-ge1" secondAttribute="bottom" id="v1g-YS-Ygj"/>
+                            <constraint firstItem="Jnr-eS-ge1" firstAttribute="leading" secondItem="ZWq-6l-YQo" secondAttribute="leading" id="xNR-OV-XQn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fHg-QE-eOX"/>
                     <connections>
                         <outlet property="dateLabel" destination="zgs-6g-Okd" id="iCw-Os-UZP"/>
-                        <outlet property="moodImage" destination="QFs-Pu-OwM" id="ZLY-hF-XaI"/>
+                        <outlet property="moodLabel" destination="3fT-fG-16b" id="Kom-0l-sx6"/>
                         <outlet property="playlistButton" destination="UGN-OC-O1m" id="kBX-1E-KxE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n9Q-bu-B3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1336.8" y="-918.89055472263874"/>
+            <point key="canvasLocation" x="1336.2318840579712" y="-919.56521739130437"/>
         </scene>
         <!--Playlist-->
         <scene sceneID="bNs-Lh-tkB">
