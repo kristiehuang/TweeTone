@@ -16,10 +16,30 @@ typealias ServiceResponse = (JSONSerialization, NSError?) -> Void
 
 
 class PlaylistViewController: UIViewController {
+    
     @IBOutlet weak var dateLabel: UILabel!
+    
     @IBOutlet weak var moodLabel: UILabel!
     
     @IBOutlet weak var playlistButton: UIButton!
+    
+    var mood = ""
+    var playlistURL = ""
+    func isHappy(tweet: String) -> Bool {
+        var words = ["yay", "happy", ";)", "better", "good", "fun", ":)", "!", "is", "my"]
+        for word in words {
+            if TimelineTableViewController.tweetString.contains(word) {
+                playlistURL = "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWYBO1MoTDhZI"
+                return true
+                
+            }
+            else { playlistURL = "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXbvABJXBIyiY" }
+        }
+        playlistURL = "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXbvABJXBIyiY"
+        return false
+    }
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +51,15 @@ class PlaylistViewController: UIViewController {
         let result = formatter.string(from: date)
 
         dateLabel.text = "Today, \(result),"
+        
+        
+        if isHappy(tweet: TimelineTableViewController.tweetString) == true {
+            moodLabel.text = "joy"
+        }
+        else { moodLabel.text = "sad"
+        }
+        
+        
         /*
         
         guard let jsonURL = Bundle.main.url(forResource: "iTunes-Movies", withExtension: "json") else {
@@ -77,11 +106,13 @@ class PlaylistViewController: UIViewController {
         
         
     }
-    
+    @IBAction func showTweetsTapped(_ sender: Any) {
+        
+    }
     
     @IBAction func playlistButtonTapped(_ sender: Any) {
         
-        UIApplication.shared.openURL(URL(string: "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXbvABJXBIyiY")!)
+        UIApplication.shared.openURL(URL(string: playlistURL)!)
 
     }
     

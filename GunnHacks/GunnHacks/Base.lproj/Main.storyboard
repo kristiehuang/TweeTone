@@ -8,6 +8,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Time-->
         <scene sceneID="Ew2-um-gNA">
@@ -31,32 +36,51 @@
         <scene sceneID="aiH-uf-Rvk">
             <objects>
                 <tableViewController id="BPM-lh-7uK" customClass="TimelineTableViewController" customModule="GunnHacks" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="n3i-Ir-nQ9">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="603" sectionHeaderHeight="28" sectionFooterHeight="28" id="PX1-wU-Je4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <scrollView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="qTq-Bl-czh">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="715"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trends" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7f-h7-8hY">
+                                    <rect key="frame" x="174" y="30" width="65.666666666666657" height="23"/>
+                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="B7f-h7-8hY" firstAttribute="centerX" secondItem="qTq-Bl-czh" secondAttribute="centerX" id="VSj-DX-yJ3"/>
+                                <constraint firstItem="B7f-h7-8hY" firstAttribute="top" secondItem="qTq-Bl-czh" secondAttribute="top" constant="30" id="tTt-NL-gxr"/>
+                            </constraints>
+                        </scrollView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="YMT-j1-PEJ">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="testCell" rowHeight="603" id="ifH-qI-cbu">
+                                <rect key="frame" x="0.0" y="743" width="414" height="603"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YMT-j1-PEJ" id="e4k-Jc-bMK">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ifH-qI-cbu" id="Y07-oz-5wj">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="602.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="BPM-lh-7uK" id="kZr-qW-Cm3"/>
-                            <outlet property="delegate" destination="BPM-lh-7uK" id="kjX-b7-Zp3"/>
+                            <outlet property="dataSource" destination="BPM-lh-7uK" id="y8d-D4-8vG"/>
+                            <outlet property="delegate" destination="BPM-lh-7uK" id="DiW-Rv-olY"/>
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Trends" image="trends icon" id="PmH-qL-uD2">
                         <inset key="imageInsets" minX="3" minY="3" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="scrollView" destination="qTq-Bl-czh" id="f8q-dQ-etP"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1St-0X-6GO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="178" y="-920"/>
+            <point key="canvasLocation" x="176.81159420289856" y="-920.38043478260875"/>
         </scene>
         <!--Playlist-->
         <scene sceneID="pJU-yH-buY">
@@ -67,6 +91,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kds-ib-sUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-257" y="-1534"/>
+        </scene>
+        <!--Feed2 View Controller-->
+        <scene sceneID="pQM-WE-SUt">
+            <objects>
+                <viewController id="fjk-ro-c48" customClass="Feed2ViewController" customModule="GunnHacks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xoV-o8-PrU"/>
+                        <viewControllerLayoutGuide type="bottom" id="FH0-Bu-kBU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pfC-cQ-sFF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6x8-q1-q1X">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6x8-q1-q1X" firstAttribute="top" secondItem="pfC-cQ-sFF" secondAttribute="top" id="HQB-RI-s3Q"/>
+                            <constraint firstAttribute="trailing" secondItem="6x8-q1-q1X" secondAttribute="trailing" id="MUu-fs-3hf"/>
+                            <constraint firstItem="FH0-Bu-kBU" firstAttribute="top" secondItem="6x8-q1-q1X" secondAttribute="bottom" id="wMn-1o-1VX"/>
+                            <constraint firstItem="6x8-q1-q1X" firstAttribute="leading" secondItem="pfC-cQ-sFF" secondAttribute="leading" id="yPK-e8-ccm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="6x8-q1-q1X" id="0lF-f6-OxF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hne-ul-Bbm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="-211"/>
         </scene>
     </scenes>
     <resources>
