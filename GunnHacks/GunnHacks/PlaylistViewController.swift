@@ -43,6 +43,8 @@ class PlaylistViewController: UIViewController {
                 happCount += 1
             }
         }
+        print(happCount)
+        print(count)
         percentage = happCount / count
         print(percentage)
         if (percentage >= 0.5) {
