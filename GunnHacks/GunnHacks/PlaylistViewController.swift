@@ -26,17 +26,34 @@ class PlaylistViewController: UIViewController {
     var mood = ""
     var playlistURL = ""
     func isHappy(tweet: String) -> Bool {
-        var words = ["yay", "happy", ";)", "better", "good", "fun", ":)", "!", "is", "my"]
-        for word in words {
-            if TimelineTableViewController.tweetString.contains(word) {
-                playlistURL = "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWYBO1MoTDhZI"
-                return true
-                
+        var happCount = 0.0
+        var count = 0.0
+        var percentage = 0.0;
+        var words = ["yay", "happy", ";)", "better", "good", "fun", ":)"]
+        var hasHappy = false;
+        
+        for t in TimelineTableViewController.tweets {
+            count += 1
+            for w in words {
+                if t.contains(w) {
+                    hasHappy = true;
+                }
             }
-            else { playlistURL = "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXbvABJXBIyiY" }
+            if (hasHappy) {
+                happCount += 1
+            }
         }
-        playlistURL = "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXbvABJXBIyiY"
-        return false
+        percentage = happCount / count
+        print(percentage)
+        if (percentage >= 0.5) {
+            playlistURL = "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWYBO1MoTDhZI"
+            return true;
+        }
+        else //percentage < 0.5
+        {
+            playlistURL = "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXbvABJXBIyiY"
+            return false;
+        }
     }
 
 

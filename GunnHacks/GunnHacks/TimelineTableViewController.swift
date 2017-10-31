@@ -13,6 +13,7 @@ class TimelineTableViewController: TWTRTimelineViewController {
         
     var tweetNumber = 0
     static var tweetString = ""
+    static var tweets = [String]();
     
     @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
@@ -27,7 +28,7 @@ class TimelineTableViewController: TWTRTimelineViewController {
         let client = TWTRAPIClient()
         
         
-        for _ in 1...20       {
+        for _ in 1...100       {
             let randNum = arc4random_uniform(300)
             
             showTweet(client: client, randNum: randNum)
@@ -54,6 +55,7 @@ class TimelineTableViewController: TWTRTimelineViewController {
             if let t = tweet {
                 print(t)
                 TimelineTableViewController.tweetString += "\(t.text)"
+                TimelineTableViewController.tweets.append(t.text)
                 let tweetView = TWTRTweetView(tweet: t)
                 tweetView.showActionButtons = true
                 self.scrollView.addSubview(tweetView)
