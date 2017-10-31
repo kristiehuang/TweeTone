@@ -24,8 +24,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="vco-7f-BCr" kind="relationship" relationship="viewControllers" id="gQT-wD-0b6"/>
                         <segue destination="BPM-lh-7uK" kind="relationship" relationship="viewControllers" id="B9o-oe-Nmn"/>
+                        <segue destination="vco-7f-BCr" kind="relationship" relationship="viewControllers" id="gQT-wD-0b6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vpp-tV-FNx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -91,38 +91,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kds-ib-sUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-257" y="-1534"/>
-        </scene>
-        <!--Feed2 View Controller-->
-        <scene sceneID="pQM-WE-SUt">
-            <objects>
-                <viewController id="fjk-ro-c48" customClass="Feed2ViewController" customModule="GunnHacks" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xoV-o8-PrU"/>
-                        <viewControllerLayoutGuide type="bottom" id="FH0-Bu-kBU"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="pfC-cQ-sFF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6x8-q1-q1X">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="6x8-q1-q1X" firstAttribute="top" secondItem="pfC-cQ-sFF" secondAttribute="top" id="HQB-RI-s3Q"/>
-                            <constraint firstAttribute="trailing" secondItem="6x8-q1-q1X" secondAttribute="trailing" id="MUu-fs-3hf"/>
-                            <constraint firstItem="FH0-Bu-kBU" firstAttribute="top" secondItem="6x8-q1-q1X" secondAttribute="bottom" id="wMn-1o-1VX"/>
-                            <constraint firstItem="6x8-q1-q1X" firstAttribute="leading" secondItem="pfC-cQ-sFF" secondAttribute="leading" id="yPK-e8-ccm"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="scrollView" destination="6x8-q1-q1X" id="0lF-f6-OxF"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hne-ul-Bbm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="30" y="-211"/>
         </scene>
     </scenes>
     <resources>

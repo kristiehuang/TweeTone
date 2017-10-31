@@ -226,7 +226,7 @@
         <scene sceneID="bNs-Lh-tkB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Lv2-24-gQu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Playlist" image="music icon" id="jaF-8P-A7t">
+                    <tabBarItem key="tabBarItem" tag="1" title="Playlist" image="music icon" id="jaF-8P-A7t">
                         <inset key="imageInsets" minX="3" minY="3" maxX="3" maxY="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -250,6 +250,6 @@
         <image name="music icon" width="33" height="33"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Nxq-1s-Tsr"/>
+        <segue reference="Qdm-EM-12C"/>
     </inferredMetricsTieBreakers>
 </document>
