@@ -1,5 +1,7 @@
 # TweeTone
 
+Built at GunnHacks 4.0, October 2017. Kristie Huang (Gunn '19), Jacob Kim (Harker '19), Sonal Muthal (Harker '19), Amisha Jain (American '20), Christopher Liang (Gunn '19).
+
 # Inspiration
 Every day, people all around the world post their thoughts on Twitter. Being such a pervasive platform, Twitter provides a space where millions of users can express their views and thoughts about almost anything. With everything that's going on in the world today, it's important to stay connected to those in our extended community. Why not harness and analyze the immense quantity of real user data found in everyday tweets? With this in mind, we created TweeTone, a fun tool that allows users to connect to our global community through music.
 
